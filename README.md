@@ -22,7 +22,7 @@ Demais páginas:
 
 Pagina de cadastro de usuário.
 
-    Nome usuario, endereço completo, tipo de usuario.
+    Nome usuario, endereço completo, tipo de usuario, login, senha
 
 Relatórios.
 
