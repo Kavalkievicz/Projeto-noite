@@ -38,7 +38,7 @@ Criar uma base de dados chamada prj_php_db
 
 tb_usuarios
 
-id, nome_usuario, cpf, data_ascimento, telefone, endereço, num_cada, bairro, fk_id_tb_cidades, ativo, created_at, disabled_at, tipo_usuario, login, senha
+id, nome_usuario, cpf, data_ascimento, telefone, endereço, num_cada, bairro, fk_id_tb_cidades, ativo, created_at, disabled_at, tipo_usuario, login, senha, ativo
 ------------------------------------------------
 tb_cidades
 
