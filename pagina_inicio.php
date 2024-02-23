@@ -4,6 +4,7 @@ $nome = $_GET['nome'];
 
 echo "{$usuario}<br>";
 echo $nome;
+// die();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +28,12 @@ include 'cabecalho.php';
 
     <?php } else if ($usuario == 'recepcao') { ?>
             <h1>RECEPÇÃO</h1>
+            <h3>Com a sua senha você pode ter acesso ao seguinte relatório:</h3>
+            <a href="relatorio_cliente.php"><button>Gerar relatório</button></a>
     <?php } else { ?>
             <h1>COBRANÇA</h1>
+            <h3>Com a sua senha você pode ter acesso ao seguinte relatório:</h3>
+            <a href="lista.php"><button>Gerar relatório</button></a>
     <?php } ?>
 </body>
 <?php

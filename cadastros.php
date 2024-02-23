@@ -1,3 +1,16 @@
+<?php include 'conexao_aula.php'; ?>
+<?php
+function cadastro($conexao)
+{
+    $dados = "SELECT * FROM tb_cidades";
+    $sql_conexao = $conexao->query($dados) or die($conexao->error);
+
+    return $sql_conexao;
+}
+
+$cidades = cadastro($conexao);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,7 +31,12 @@ include 'cabecalho.php';
     <input type="text" placeholder="Endereço" id="endereco">
     <input type="number" placeholder="Numero da casa" id="num_casa">
     <input type="text" placeholder="Bairro" id="bairro">
-    <input type="text" placeholder="Cidade" id="fk_id_tb_cidades">
+    <select name="fk_id_tb_cidades" id="fk_id_tb_cidades">
+        <option value="-1">Selecione a cidade</option>
+        <?php foreach ($cidades as $cidade) { ?>
+            <option value="<?php echo $cidade['id']; ?>"><?php echo $cidade['nome_cidade']; ?></option>
+        <?php } ?>
+    </select>
     <input type="text" placeholder="Tipo do usuario" id="tipo_usuario">
     <input type="text" placeholder="Login" id="login">
     <input type="passoword" placeholder="Senha" id="senha">
