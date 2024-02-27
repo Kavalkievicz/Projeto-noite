@@ -1,13 +1,11 @@
 <?php include 'conexao_aula.php'; ?>
 
 <?php
-
 function relatorioCliente($conexao)
 {
     $dados = "SELECT * FROM tb_usuarios";
     $sql_conexao = $conexao->query($dados) or die($conexao->error);
     return $sql_conexao;
-
 }
 
 $dadosCliente = relatorioCliente($conexao);
@@ -17,10 +15,7 @@ function cidades($conexao, $id_cidade)
     $dados = "SELECT nome_cidade FROM tb_cidades WHERE id = '$id_cidade'";
     $sql_conexao = $conexao->query($dados) or die($conexao->error);
     return $sql_conexao;
-
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -29,9 +24,9 @@ function cidades($conexao, $id_cidade)
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Document</title>
 </head>
 
 <body>
@@ -52,10 +47,11 @@ function cidades($conexao, $id_cidade)
             <td>tipo_usuario</td>
             <td>login</td>
             <td>senha</td>
+            <td>ação</td>
         </thead>
         <tbody>
             <?php foreach ($dadosCliente as $usuarios) { ?>
-                <tr>
+                <tr class="main" id="teste" data-usuario="<?php echo $usuarios['id']; ?>">
                     <td>
                         <?php echo $usuarios['id']; ?>
                     </td>
@@ -101,6 +97,9 @@ function cidades($conexao, $id_cidade)
                     <td>
                         <?php echo $usuarios['senha']; ?>
                     </td>
+                    <!-- <td>
+                        <button class="desativar" onclick="desativar()" type="button">Desativar</button>
+                    </td> -->
                 </tr>
             <?php } ?>
         </tbody>
@@ -108,3 +107,14 @@ function cidades($conexao, $id_cidade)
 </body>
 
 </html>
+<!-- <script>
+
+    function desativar() {
+       
+        let usuario = document.querySelector('.main').getAttribute('data-usuario');
+        console.log(usuario);
+
+        // window.open(`desabilitar.php?botao=${usuario}`);
+    }
+
+</script> -->
