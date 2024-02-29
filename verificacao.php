@@ -22,7 +22,7 @@ foreach ($cadastro_usuario as $usuario) {
     if ($tipoUsuario) {
         header('Location: pagina_inicio.php?tipo_usuario=' . $tipoUsuario . '&nome=' . $nome_usuario);
     } else {
-        echo 'nome e senha incorretos!!';
+        echo 'nome e senha incorretos!';
     }
 }
 ?>
