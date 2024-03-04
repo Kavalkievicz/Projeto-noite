@@ -28,6 +28,8 @@ function cidades($conexao, $id_cidade)
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+<?php include 'cabecalho.php'; ?>
+<?php include 'menu.php'; ?>
 
 <body>
     <table class="table table-success table-striped border-default">
@@ -97,24 +99,23 @@ function cidades($conexao, $id_cidade)
                     <td>
                         <?php echo $usuarios['senha']; ?>
                     </td>
-                    <!-- <td>
+                    <td>
                         <button class="desativar" onclick="desativar()" type="button">Desativar</button>
-                    </td> -->
+                    </td>
                 </tr>
             <?php } ?>
         </tbody>
     </table>
+    <?php include 'rodape.php'; ?>
 </body>
 
 </html>
-<!-- <script>
+<script>
 
     function desativar() {
-       
-        let usuario = document.querySelector('.main').getAttribute('data-usuario');
-        console.log(usuario);
 
-        // window.open(`desabilitar.php?botao=${usuario}`);
+        let usuario = document.querySelector('.main').getAttribute('data-usuario');
+        window.open(`desabilitar.php?botao=${usuario}`);
     }
 
-</script> -->
+</script>

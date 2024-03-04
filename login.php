@@ -14,7 +14,7 @@ include 'cabecalho.php';
 
 <body>
     <input type="text" placeholder="login" id="usuario">
-    <input type="passoword" placeholder="senha" id="senha">
+    <input type="password" placeholder="senha" id="senha">
     <button onclick="entrar()" type="submit">Entrar</button>
 </body>
 <?php

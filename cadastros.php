@@ -22,6 +22,7 @@ $cidades = cadastro($conexao);
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <?php include 'cabecalho.php'; ?>
+<?php include 'menu.php'; ?>
 
 <body>
     <input type="text" placeholder="Nome do usuario" id="nome_usuario">

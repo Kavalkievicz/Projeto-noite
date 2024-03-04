@@ -21,10 +21,10 @@ $nome = $_GET['nome'];
     <h1> Olá usuario
         <?php echo $usuario . ' ' . $nome; ?>
     </h1>
-    <?php if ($usuario == 'master') { ?>    
+    <?php if ($usuario == 'master') { ?>
         <h1>Aqui você pode cadastrar novos usuários clicando no botão abaixo</h1>
         <a href="cadastros.php"><button>Cadastrar</button></a>
-        <a href="lista.php"><button>Gerar relatório</button></a>
+        <a href="relatorio_cliente.php"><button>Gerar relatório</button></a>
 
     <?php } else if ($usuario == 'recepcao') { ?>
             <h1>RECEPÇÃO</h1>
@@ -36,8 +36,6 @@ $nome = $_GET['nome'];
             <a href="lista.php"><button>Gerar relatório</button></a>
     <?php } ?>
 </body>
-<?php
-include 'rodape.php';
-?>
+<?php include 'rodape.php'; ?>
 
 </html>
